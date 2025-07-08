@@ -2,8 +2,8 @@ import gradio as gr
 import skops.io  as sio
 import pandas as pd
 
-unknown_types = sio.get_untrusted_types(file="../Model/credit_loan_detection.skops")
-pipe = sio.load("../Model/credit_loan_detection.skops", trusted = unknown_types)
+unknown_types = sio.get_untrusted_types(file="Model/credit_loan_detection.skops")
+pipe = sio.load("Model/credit_loan_detection.skops", trusted = unknown_types)
 def predict_credit_risk(person_age, person_income, person_home_ownership,person_emp_length, loan_intent, loan_amnt, loan_int_rate, loan_percent_income, cb_person_default_on_file, cb_person_cred_hist_length):
     """Predict credit risk based on person information.
     Args:
