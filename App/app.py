@@ -57,7 +57,7 @@ def predict_credit_risk(person_age, person_income, person_home_ownership,person_
     features = [features]
     prediction = pipe.predict(features)[0]
 
-    label = f"Predicted Loan Status: {'Tidak Disetujui' if prediction == 1 else 'Disetujui'}"
+    label = f"Status Pinjaman: {'Ditolak' if prediction == 1 else 'Diterima'}"
     return label
 
 inputs = [
