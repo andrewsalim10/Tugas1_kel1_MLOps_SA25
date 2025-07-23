@@ -4,7 +4,7 @@ from sdv.single_table import GaussianCopulaSynthesizer
 import pandas as pd
 
 # baca data
-data = pd.read_csv('Data\credit_risk_dataset.csv')
+data = pd.read_csv("Data\credit_risk_dataset.csv")
 
 # buat metadata
 metadata = Metadata()
@@ -18,5 +18,5 @@ synthetic_data = synthesizer.sample(num_rows=1000)
 
 # simpan data baru
 previous_data = data.copy()
-previous_data.to_csv('Data\previous_credit_risk_dataset.csv', index=False)
-synthetic_data.to_csv('Data\credit_risk_dataset.csv', index=False)
+previous_data.to_csv("Data\previous_credit_risk_dataset.csv", index=False)
+synthetic_data.to_csv("Data\credit_risk_dataset.csv", index=False)
